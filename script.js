@@ -39,6 +39,8 @@ const shuffleOrder = () => {
 
 const checkOrder = () => {
     for(let i in clickedOrder) {
+        console.log('CLICKEDORDER: ', clickedOrder)
+        console.log('ORDER: ', order)
         if(clickedOrder[i] != order[i]) {
             gameOver();
             break;
@@ -47,6 +49,7 @@ const checkOrder = () => {
             alert(`Pontuação: ${score}\nVocê acertou! Iniciando próximo nível!`)
             nextLevel();
         }
+        
     }
 }
 
