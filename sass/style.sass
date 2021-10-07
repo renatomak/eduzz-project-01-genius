@@ -1,5 +1,6 @@
 @use 'variable'
 @use 'reset'
+@import 'mixins'
 
 body
     margin: 0
@@ -16,11 +17,33 @@ body
 
 .genius
     display: grid
-    grid-template-areas: 'green red blue yellow'
+    grid-template-areas: 'green red' 'yellow blue'
     grid-gap: 10px
     border: 1px solid variable.$white
     background-color: variable.$white
     border-radius: 100%
     width: 700px
     height: 700px
+
+.blue
+    @include genius-div('blue', variable.$blue)
+    border-top-left-radius: 100%
+
+.yellow
+    @include genius-div('yellow', variable.$yellow)
+    border-top-right-radius: 100%
+
+.red
+    @include genius-div('red', variable.$red)
+    border-bottom-left-radius: 100%
+
+.green
+    @include genius-div('green', variable.$green)
+    border-bottom-right-radius: 100%
+
+.selected
+    opacity: 0
+
+
+    
     

@@ -15,13 +15,45 @@ body {
 
 .genius {
   display: grid;
-  grid-template-areas: "green red blue yellow";
+  grid-template-areas: "green red" "yellow blue";
   grid-gap: 10px;
   border: 1px solid white;
   background-color: white;
   border-radius: 100%;
   width: 700px;
   height: 700px;
+}
+
+.blue {
+  grid-area: "blue";
+  background-color: blue;
+  cursor: pointer;
+  border-top-left-radius: 100%;
+}
+
+.yellow {
+  grid-area: "yellow";
+  background-color: yellow;
+  cursor: pointer;
+  border-top-right-radius: 100%;
+}
+
+.red {
+  grid-area: "red";
+  background-color: red;
+  cursor: pointer;
+  border-bottom-left-radius: 100%;
+}
+
+.green {
+  grid-area: "green";
+  background-color: green;
+  cursor: pointer;
+  border-bottom-right-radius: 100%;
+}
+
+.selected {
+  opacity: 0;
 }
 
 /*# sourceMappingURL=style.css.map */
